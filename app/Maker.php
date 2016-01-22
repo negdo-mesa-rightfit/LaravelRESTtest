@@ -12,9 +12,8 @@ class Maker extends Model
 
 	public function vehicles()
 	{
-		return $this->belongsTo('App\Maker');
+		return $this->hasMany('App\Vehicle');
 	}
 }
-	
 
  ?>
