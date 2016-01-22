@@ -20,4 +20,8 @@
 // 	'password' => 'Auth\PasswordController',
 // ]);
 
-Route::get('/{name?}', 'MyController@index');
+Route::resource('makers', 'MakerController', ['except' => ['edit', 'create']]);
+
+Route::resource('vehicles', 'VehicleController', ['only' => ['index']]);
+
+Route::resource('makers.vehicles', 'MakerVehiclesController', ['except' => ['edit', 'create'] ]);
