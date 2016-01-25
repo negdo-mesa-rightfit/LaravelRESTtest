@@ -42,7 +42,8 @@ class Handler extends ExceptionHandler {
 		}
 		else
 		{
-			return parent::render($request, $e);
+			return response()->json(['message' => 'Unrecognized error, please try again later', 'code' => 500], 500);
+			//return parent::render($request, $e);
 		}
 	}
 
